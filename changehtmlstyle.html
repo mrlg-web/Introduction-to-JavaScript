@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML Style</title>
+    <style>
+        .bluebox {
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+
+        .yellowbox {
+            background-color: #EDFFAB;
+            color black;
+            height: 100px;
+            width: auto;
+        }
+
+        .greenbox {
+            background-color: #623B5A;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+
+        .great {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bluebox" id="facebook">
+        <p>Facebook</p>
+    </div>
+    <div class="yellowbox" id="apple">
+        <p>Apple</p>
+    </div>
+    <div class="greenbox" id="microsoft">
+        <p>Microsoft</p>
+    </div>
+    <br>
+    <button id="button1">Change Facebook Style</button>
+    <button id="button2">Change Apple Style</button>
+    <button id="button3">Change Microsoft Content</button>
+    <br>
+    <br>
+    <button id="button4">Reverse Changes</button>
+
+
+    <script>
+        document.getElementById('button1').onclick = function () {
+            document.getElementById('facebook').style.width = '200px'; // = "<p>Chrome :)</p>";
+            document.getElementById('facebook').innerHTML = "<p>Chrome :)</p>";
+        }
+        document.getElementById('button2').onclick = function () {
+            document.getElementById('apple').innerHTML = "<p>Mozzilla :)</p>";
+            document.getElementById('apple').style.backgroundColor = 'rgba(90, 78, 135, 0.922)';
+            document.getElementById('apple').style.color = 'rgba(230, 228, 69, 0.76 )'
+        }
+        document.getElementById('button3').onclick = function () {
+            document.getElementById('microsoft').innerHTML = "<p>Opera :)</p>";
+        }
+
+        document.getElementById('button4').onclick = function () {
+            document.getElementById('facebook').innerHTML = "<p>Facebook</p>"
+            document.getElementById('facebook').style.width = 'auto';
+            document.getElementById('apple').innerHTML = "<p>Apple</p>"
+            document.getElementById('microsoft').innerHTML = "<p>Microsoft</p>"
+        }
+
+
+    </script>
+</body>
+
+</html>
